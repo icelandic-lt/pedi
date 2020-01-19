@@ -1,0 +1,8 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+dict1:
+  name: Dict1
+
+
+dict2:
+  name: Dict2

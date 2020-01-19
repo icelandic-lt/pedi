@@ -1,0 +1,5 @@
+Góðan dag <%= @user.name %>,
+
+Hér að neðan er tengillinn þinn til þess að virkja aðgang að "Spurningum Skagamanna":
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

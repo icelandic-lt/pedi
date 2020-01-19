@@ -1,0 +1,10 @@
+<h1>Spurningar Skagamanna</h1>
+
+<p>Góðan dag <%= @user.name %>,</p>
+
+<p>
+  Hér að neðan er tengillinn þinn til þess að virkja aðgang að "Spurningum Skagamanna":
+</p>
+
+<%= link_to "Virkja aðgang", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

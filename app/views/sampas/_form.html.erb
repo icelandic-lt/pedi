@@ -1,0 +1,24 @@
+<%= form_with(model: sampa, local: true) do |form| %>
+  <% if sampa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sampa.errors.count, "error") %> prohibited this sampa from being saved:</h2>
+
+      <ul>
+        <% sampa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.file_field :attachment, :multipart => true %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

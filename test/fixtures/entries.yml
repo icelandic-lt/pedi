@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bera:
+  word: bera
+  sampa: 'b E: r a'
+  comment: ''
+  user: usera
+  dictionary: dict1
+
+dalur:
+  word: dalur
+  sampa: 'd a: l Y r'
+  comment: 'Comment for dalur'
+  user: usera
+  dictionary: dict2
+
+pera:
+  word: pera
+  sampa: 'p E: r a'
+  comment: 'Comment for pera'
+  user: userb
+  dictionary: dict1

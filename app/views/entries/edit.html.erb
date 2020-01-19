@@ -1,0 +1,5 @@
+<h1>Editing Entry</h1>
+<% cookies[:before_url] = url_for(:back) %>
+<%= render 'form', entry: @entry %>
+
+<%= link_to 'Back', :back %>

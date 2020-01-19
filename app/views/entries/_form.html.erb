@@ -1,0 +1,42 @@
+<%= form_with(model: entry, url: @url, local: true) do |form| %>
+  <% if entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+        <% entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-2">
+      <%= form.label :word %>
+      <%= form.text_field :word, class: 'form-control' %>
+    </div>
+
+    <div class="col-md-4 mb-2">
+      <%= form.label :sampa %>
+      <%= form.text_field :sampa, class: 'form-control' %>
+    </div>
+
+    <div class="col-md-4 mb-2">
+      <%= form.label :comment %>
+      <%= form.text_area :comment, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <%= form.check_box :is_final, class: 'form-check-input', id: 'entry_is_final' %>
+      <%= form.label 'Final', class: 'form-check-label', for: 'entry_is_final' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="btn btn-primary">
+      <%= form.submit %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entries</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Word</th>
+      <th scope="col">SAMPA</th>
+      <th scope="col">Comment</th>
+      <th scope="col">Modified</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.word %></td>
+        <td><%= entry.sampa %></td>
+        <td><%= entry.comment %></td>
+        <td><%= entry.updated_at %></td>
+        <td><%= link_to 'Show', dictionary_entry_path(@dictionary, entry) %></td>
+        <td><%= link_to 'Edit', edit_dictionary_entry_path(@dictionary, entry) %></td>
+        <td><%= link_to 'Destroy', dictionary_entry_path(@dictionary, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entry', new_dictionary_entry_path(@dictionary) %>

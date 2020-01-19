@@ -1,0 +1,42 @@
+<% if logged_in? %>
+  <p id="notice"><%= notice %></p>
+
+  <h1>SAMPA lists</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Phonemes</th>
+        <th scope="col">Dictionaries</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @sampas.each do |sampa| %>
+        <tr>
+          <td><%= link_to "#{sampa.name}", sampa %></td>
+          <td><%= sampa.phonemes %></td>
+          <td>
+          <% sampa.dictionaries.all.load do |dict| %>
+            <%= dict.name + ' ' %>
+          <% end %>
+          </td>
+          <td><%= link_to 'Destroy', sampa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <%= link_to 'New Entry', new_sampa_path %>
+
+<% else %>
+  <div class="center jumbotron">
+    <h1 class="question-title">PEDI</h1>
+    <p>Pronunciation dictionary Editor</p>
+
+    <%= link_to "Login", login_path, class: "btn btn-lg btn-primary" %>
+  </div>
+
+<% end %>

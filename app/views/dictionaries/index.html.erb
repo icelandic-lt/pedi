@@ -1,0 +1,28 @@
+<% if logged_in? %>
+  <h1>Dictionaries</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name    </th>
+        <th scope="col">Entries</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @dictionaries.each do |dictionary| %>
+        <tr>
+          <td><%= link_to "#{dictionary.name}", dictionary %></td>
+          <td><%= dictionary.entries.count %></td>
+          <td><%= link_to 'Edit', edit_dictionary_path(dictionary) %></td>
+          <td><%= link_to 'Export', export_dictionary_path(dictionary), method: :export %></td>
+          <td><%= link_to 'Destroy', dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Dictionary', new_dictionary_path %>
+<% end %>
