@@ -1,28 +1,38 @@
-<% if logged_in? %>
-  <h1>Dictionaries</h1>
+<h2><%= t('Dictionaries') %></h2>
 
-  <table class="table">
-    <thead>
+<%= form_tag export_multiple_dictionaries_path, method: :post do %>
+
+<table class="table dictionaries">
+  <thead>
+    <tr>
+      <th scope="col"><%= t('Name') %>    </th>
+      <th scope="col"><%= t('Entries') %></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th data-sort-ignore="true"><input type="checkbox" id="selectAll"/><%= t('Select all')%> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dictionaries.each do |dictionary| %>
       <tr>
-        <th scope="col">Name    </th>
-        <th scope="col">Entries</th>
+        <td><%= link_to "#{dictionary.name}", dictionary %></td>
+        <td><%= dictionary.entries.count %></td>
+        <td><%= link_to t('Edit'), edit_dictionary_path(dictionary) %></td>
+        <td><%= link_to t('Destroy'), dictionary, method: :delete, data: { confirm: t('Are you sure?') } %></td>
+        <td><%= check_box_tag "dictionary_ids[]", dictionary.id, false, class: 'selectable' %></td>
       </tr>
-    </thead>
+    <% end %>
+  <tr>
+    <td>
+      <%= link_to t('New Dictionary'), new_dictionary_path, :class => 'btn btn-primary btn-xs' %>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+      <td><%= submit_tag t('Export selected'), :class => 'btn btn-primary btn-xs', data: { disable_with: false } %></td>
+  </tr>
+  </tbody>
+</table>
 
-    <tbody>
-      <% @dictionaries.each do |dictionary| %>
-        <tr>
-          <td><%= link_to "#{dictionary.name}", dictionary %></td>
-          <td><%= dictionary.entries.count %></td>
-          <td><%= link_to 'Edit', edit_dictionary_path(dictionary) %></td>
-          <td><%= link_to 'Export', export_dictionary_path(dictionary), method: :export %></td>
-          <td><%= link_to 'Destroy', dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Dictionary', new_dictionary_path %>
 <% end %>

@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Word:</strong>
+  <strong><%= t('Word') %>:</strong>
   <%= @entry.word %>
 </p>
 
 <p>
-  <strong>SAMPA:</strong>
+  <strong><%= t('SAMPA') %>:</strong>
   <%= @entry.sampa %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong><%= t('Comment') %>:</strong>
   <%= @entry.comment %>
 </p>
 
 <p>
-  <strong>Modified:</strong>
+  <strong><%= t('Modified') %>:</strong>
   <%= @entry.updated_at %>
 </p>
 
-<%= link_to 'Edit', edit_dictionary_entry_path(@dictionary, @entry) %> |
-<%= link_to 'Back', :back %>
+<%= link_to t('Edit'), edit_dictionary_entry_path(@dictionary, @entry) %> |
+<%= link_to t('Back'), :back %>

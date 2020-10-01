@@ -1,17 +1,7 @@
-<% if logged_in? %>
-  <h1>New SAMPA</h1>
-  <p>Please provide a file for upload. This file should contain a newline separated list of possible phonemes</p>
-  <%= render 'form', sampa: @sampa %>
+<h1>New SAMPA</h1>
+<p>Please provide a file for upload. This file should contain a newline separated list of possible phonemes</p>
+<%= render 'form', sampa: @sampa %>
 
 
-  <%= link_to 'Back', :back %>
-<% else %>
-<div class="center jumbotron">
-  <h1 class="question-title">PEDI</h1>
-  <p>Pronunciation dictionary Editor</p>
+<%= link_to 'Back', :back %>
 
-  <%= link_to "Login", login_path, class: "btn btn-lg btn-primary" %>
-
-</div>
-
-<% end %>

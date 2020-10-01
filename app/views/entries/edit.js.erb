@@ -1,0 +1,3 @@
+document.getElementById('<%= dom_id(@entry) %>').insertAdjacentHTML('beforeend', "<%= j render 'inline_form', entry: @entry %>")
+document.getElementById('<%= dom_id(@entry) %>').classList.add('edit')
+document.getElementById('sampa-<%= @entry.id %>').focus()

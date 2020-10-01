@@ -1,48 +1,60 @@
-<p></p>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <strong>Dictionary:</strong>
-      <%= @dictionary.name %>
-    </div>
-    <div class="col">
-      <strong>Words:</strong>
-      <%= @entry_count %>
-    </div>
-    <% unless @dictionary.sampa.nil? %>
-      <div class="col">
-        <strong>SAMPA List:</strong>
-        <%=  @dictionary.sampa.name %>
+<div class="filter-trigger">
+  <button id="filterTrigger" title="Toggle filter">
+  <svg viewBox="0 0 16 16" >
+    <path fill-rule="evenodd" d="M6 10.5a.5.5 0 01.5-.5h3a.5.5 0 010 1h-3a.5.5 0 01-.5-.5zm-2-3a.5.5 0 01.5-.5h7a.5.5 0 010 1h-7a.5.5 0 01-.5-.5zm-2-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+  </svg>
+  </button>
+</div>
+<div class="main-filter" >
+  <%= form_with(url: dictionary_path(@dictionary), method: "get",local: "true") do %>
+    <div class="row">
+      <div class="form-group col-lg-3">
+      <label><%= t('Word') %></label>
+        <%= text_field_tag :word, @word,  class:'form-control'%>
       </div>
+      <div class="form-group col-lg-3">
+        <label><%= t('Sampa') %></label>
+        <%= text_field_tag :sampa, @sampa,  class:'form-control' %>
+      </div>
+      <div class="form-group col-lg-3">
+      <label><%= t('Comment') %></label>
+          <%= text_field_tag :comment, @comment, class:'form-control'%>
+      </div>
+       <div class="form-group -checkbox col-lg-3">
+        <%= check_box_tag :only_warnings, true, @only_warnings %>
+        <%= label_tag :only_warnings, t('With warnings') %>
+      </div>
+      <div class="col-lg-12">
+        <%= submit_tag t('Filter'), class: "btn btn-primary" %>
+      </div>
+   </div>
+  <% end %>
+</div>
+ 
+<div class="word-table">
+  <div class="text-sm-right dictionary-info">
+    <%= t('Dictionary') %>:
+    <strong><%= @dictionary.name %>,</strong>
+    <span> <%= t('Showing') %> </span>
+    <% if @sel_entries.size == @entry_count %>
+      <strong><%= "#{@sel_entries.size}" %></strong><span> <%= t('entries') %></span>
+    <% else %>
+      <strong><%= @sel_entries.size %></strong> <span><%= t('filtered of overall') %></span> <strong><%= @entry_count %></strong><span> <%= t('entries') %></span>
+    <% end %>
+  </div>
+  <div class="divTableHeading">
+    <div class="divTableRow">
+      <div class="divTableHead"><%= t('Word') %></div>
+      <div class="divTableHead"><%= t('SAMPA') %></div>
+    </div>
+  </div>
+  <div class="divTableBody" id="dictionaryEntries">
+    <% @entries.each do |entry| %>
+      <%= content_tag :div, class: 'entry', id: dom_id(entry) do %>
+        <%= render entry %>
+      <% end %>
     <% end %>
   </div>
 </div>
-<p>
-
-</p>
-
-<table class="table table-sm table-striped">
-  <caption>List of words and their SAMPAS</caption>
-  <tr>
-    <th scope="col" class="col-sm-3">Word</th>
-    <th scope="col" class="col-sm-4">SAMPA</th>
-    <th scope="col">Comment</th>
-  </tr>
-  <% @entries.each do |entry| %>
-    <tr>
-      <td><%= link_to "#{entry.word}", edit_dictionary_entry_path(@dictionary, entry)  %></td>
-      <% if sampa_correct?(entry) %>
-        <td class="table-success"><%= entry.sampa %></td>
-      <% else %>
-        <td class="table-warning"><%= entry.sampa %></td>
-      <% end %>
-      <td><%= entry.comment %></td>
-    </tr>
-  <% end %>
-</table>
 
 <%== pagy_bootstrap_nav(@pagy) %>
-
-<%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
-<%= link_to 'Back', :back %>

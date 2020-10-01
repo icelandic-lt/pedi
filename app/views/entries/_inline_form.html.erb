@@ -1,0 +1,52 @@
+<div class="divTableRow divTableRow--form">
+
+<%= form_with model: entry, url: [@dictionary, entry], class: 'divTableCell', id: dom_id(entry, 'inline_form') do |form| %>
+
+  <div class="divTableCell form-group">
+    <%= form.label t(:Word) %>
+    <%= form.text_field :word, class:"form-control"%>
+  </div>
+
+  <div class="divTableCell form-group">
+      <%= form.label t(:Sampa) %>
+    <%= form.text_field :sampa,  id:"sampa-#{entry.id}", class:"form-control" %>
+  </div>
+
+  <div class="divTableCell form-group">
+  <%= form.label t(:Comment) %>
+    <%= form.text_field :comment, class:"form-control"%>
+  </div>
+
+   <div class="divTableCell form-group">
+   <%= form.label t(:Pos)%>
+     <%= form.select :pos, @avail_pos, {}, class:"form-control" %>
+  </div>
+   <div class="divTableCell form-group">
+   <%= form.label t(:Lang) %>
+     <%= form.select :lang, ['IS', 'EN'], {}, class:"form-control" %>
+  </div>
+   <div class="divTableCell form-check">
+     <%= form.check_box :is_compound, class:"form-check-input", type:"checkbox" %>
+     <%= form.label t(:Compound), class: "form-check-label" %>
+  </div>
+   <div class="divTableCell form-group">
+   <%= form.label t('Component part') %>
+     <%= form.select :comp_part, @avail_comp_parts, {}, class:"form-control" %>
+  </div>
+  
+   <div class="divTableCell form-group">
+     <%= form.label t(:Dialect) %>
+     <%= form.select :dialect, @avail_dialects, {}, class:"form-control" %>
+  </div>
+   <div class="divTableCell form-check">
+     <%= form.check_box :prefix, class:"form-check-input", type:"checkbox" %>
+     <%= form.label t(:Prefix), class: "form-check-label" %>
+  </div>
+   <div class="divTableCell -update form-group">
+    <%= form.submit class:'btn btn-success'%> 
+  </div>
+    <button type="button" class="close closeRow" aria-label="Close">
+      <span aria-hidden="true" >&times;</span>
+    </button>
+<% end %>
+</div>

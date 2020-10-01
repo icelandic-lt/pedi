@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label t(:name) %>
     <%= form.text_field :name %>
   </div>
   <%= form.collection_select(:sampa_id, Sampa.order(:name), :id, :name,
-                             {prompt: 'Select SAMPA list', selected: @dictionary.sampa}, { class: 'form-control'})%>
+                             {prompt: t('Select SAMPA list'), selected: @dictionary.sampa}, { class: 'form-control'})%>
 
   <%= form.file_field :import_data, :multipart => true %>
 
