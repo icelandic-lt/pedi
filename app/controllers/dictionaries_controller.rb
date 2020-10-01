@@ -1,18 +1,28 @@
 class DictionariesController < ApplicationController
-  before_action :set_dictionary, only: [:show, :edit, :update, :destroy, :export]
   before_action :set_current_user
+  before_action :set_dictionary, only: [:show, :edit, :update, :destroy, :export]
 
   # GET /dictionaries
   # GET /dictionaries.json
   def index
     redirect_to help_path unless helpers.logged_in?
     @dictionaries = Dictionary.all
+    # Todo: sort by name ? If we hide sortable metadata per dictionary in the views html, the frontend can make
+    # Todo: the sorting itself, as this view so far is not paginated
   end
 
   # GET /dictionaries/1
   # GET /dictionaries/1.json
   def show
-    @pagy, @entries = pagy(@dictionary.entries)
+    @word = params[:word] || '%'
+    @sampa = params[:sampa] || '%'
+    @comment = params[:comment] || '%'
+    @only_warnings = params[:only_warnings] || false
+
+    @sel_entries = @dictionary.entries.with_word(@word).with_sampa(@sampa).with_comment(@comment).ordered
+    @sel_entries = @sel_entries.with_warning if @only_warnings
+
+    @pagy, @entries = pagy(@sel_entries, count: @sel_entries.count)
     @entry_count = @dictionary.entries.size
     cookies[:dictionary_page] = @pagy.vars[:page]
   end
@@ -69,10 +79,36 @@ class DictionariesController < ApplicationController
     end
   end
 
+  # Exports dictionary as CSV file
   def export
+    all_entries = @dictionary.entries.all.load
     respond_to do |format|
-      format.html { send_data gen_as_csv, filename: "#{@dictionary.name}.csv" }
+      format.html { send_data gen_as_csv(all_entries), filename: "#{@dictionary.name}.csv" }
       format.json { head :no_content }
+    end
+  end
+
+  # Exports multiple dictionaries as CSV file
+  def export_multiple
+    dictionary_ids = params[:dictionary_ids]
+    unless dictionary_ids
+      respond_to do |format|
+        format.html { redirect_to dictionaries_url, notice: 'No Dictionary was selected' }
+        format.json { head :no_content }
+        return
+      end
+    end
+    @dictionaries = Dictionary.find(dictionary_ids)
+    puts @dictionaries.inspect
+    all_entries = @dictionaries.each_with_object([]) do |dict, obj|
+      obj.concat dict.entries.all.load
+    end
+    respond_to do |format|
+      format.html do
+        send_data gen_as_csv(all_entries), filename: "dictionaries_#{dictionary_ids.join('_')}.csv"
+        end
+      format.json { head :no_content }
+      format.js {render inline: "location.reload();" }
     end
   end
 
@@ -84,22 +120,22 @@ class DictionariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dictionary_params
-      params.require(:dictionary).permit(:name, :edited, :sampa_id, :dictionary_id, :import_data)
+      params.require(:dictionary).permit(:name, :edited, :sampa_id, :dictionary_id, :import_data, :word, :sampa,
+                                         :comment, :only_warnings, :is_final, :locale)
     end
 
-  def gen_as_csv
-    file = CSV.generate('', headers: true, col_sep: "\t") do |csv|
-      all_entries = @dictionary.entries.all.load
-      csv << %w(word SAMPA)
-      all_entries.each do |e|
-        csv << [e.word, e.sampa]
+  def gen_as_csv(entries)
+    CSV.generate('', headers: true, col_sep: "\t") do |csv|
+      csv << %w(WORD SAMPA POS PRON_VARIANT IS_COMPOUND COMPOUND_ATTR HAS_PREFIX LANG IS_VALIDATED COMMENT)
+      entries.each do |e|
+        is_validated = e.finished && (! e.warning) || false
+        csv << [e.word.strip, e.sampa.strip, e.pos, e.dialect, e.is_compound, e.comp_part, e.prefix, e.lang, is_validated, e.comment.strip]
       end
     end
-
-    file
   end
 
   def set_current_user
+    redirect_to help_path unless helpers.logged_in?
     Current.user = helpers.current_user
   end
 end

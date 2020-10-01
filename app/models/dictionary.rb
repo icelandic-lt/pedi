@@ -3,29 +3,55 @@ class Dictionary < ApplicationRecord
   validates :sampa, presence: true
   after_save :import_csv
 
-  has_many :entries, dependent: :nullify
+  has_many :entries, dependent: :nullify, autosave: true
   belongs_to :sampa
 
   has_one_attached :import_data
+  validates :import_data, attached: true
   has_one_attached :export_data
 
+  # Bulk import all entries as CSV
   def import_csv
     unless self.attachment_changes['import_data'].nil?
-      #unless self.import_data.nil?
-      user_id = Current.user.id
-      csv_entries = CSV.read(self.attachment_changes['import_data'].attachable, headers: true, col_sep: "\t")
-      #puts "csv_entries: #{csv_entries.count}"
-      csv_entries.each do |csv|
-        #puts "{#{csv.inspect}}"
-        entry = Entry.create!(word: csv['word'],
-                        sampa: csv['sampa'],
-                        comment: '',
-                        user_id: user_id,
-                        dictionary_id: self.id)
-        puts entry.inspect if entry.id.nil?
-      end
-    else
-      puts "No self.attachment_changes['import_data'] #{self.inspect}"
+      all_entries = array_of_records
+      Entry.insert_all all_entries
     end
   end
+
+  def array_of_records
+    user_id = Current.user.id
+    now = Time.now
+    records = []
+    phonemes = sampa.phonemes.split
+    CSV.read(self.attachment_changes['import_data'].attachable, headers: true, col_sep: "\t").each do |record|
+      records << extract_(record, user_id, now, phonemes)
+    end
+    records
+  end
+
+  def extract_(record, user_id, now, phonemes)
+    {
+        word: record[0],
+        sampa: record[1] || '',
+        pos: record[2],
+        dialect: record[3] || 'all',
+        is_compound: record[4] || false,
+        comp_part: record[5] || 'none',
+        prefix: record[6] || false,
+        lang: record[7] || 'IS',
+        finished: record[8] || false,
+        comment: record[9] || '',
+        user_id: user_id,
+        dictionary_id: self.id,
+        created_at: now,
+        updated_at: now,
+        warning: !sampa_correct?(record[1], phonemes),
+    }
+  end
+
+  def sampa_correct?(sampa, phonemes)
+    return false if sampa.nil?
+    phonemes.size>0 ? (sampa.split - phonemes).size == 0: true
+  end
+
 end

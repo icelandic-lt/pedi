@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_19_204049) do
+ActiveRecord::Schema.define(version: 2020_04_15_163051) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_01_19_204049) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "sampa_id"
+    t.integer "version", default: 1
     t.index ["sampa_id"], name: "index_dictionaries_on_sampa_id"
   end
 
@@ -50,7 +51,21 @@ ActiveRecord::Schema.define(version: 2020_01_19_204049) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "dictionary_id"
+    t.boolean "finished"
+    t.boolean "warning"
+    t.string "pos"
+    t.string "lang", default: "IS"
+    t.boolean "is_compound", default: false
+    t.string "comp_part"
+    t.boolean "prefix", default: false
+    t.string "dialect"
+    t.index ["comp_part"], name: "index_entries_on_comp_part"
+    t.index ["dialect"], name: "index_entries_on_dialect"
     t.index ["dictionary_id"], name: "index_entries_on_dictionary_id"
+    t.index ["is_compound"], name: "index_entries_on_is_compound"
+    t.index ["lang"], name: "index_entries_on_lang"
+    t.index ["pos"], name: "index_entries_on_pos"
+    t.index ["prefix"], name: "index_entries_on_prefix"
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 

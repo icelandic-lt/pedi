@@ -1,4 +1,5 @@
 class SampasController < ApplicationController
+  before_action :log_in
   before_action :set_sampa, only: [:show, :edit, :update, :destroy]
 
   # GET /sampas
@@ -47,7 +48,9 @@ private
   # Never trust parameters from the scary internet, only allow the white list through.
   def sampa_params
     params.require(:sampa).permit(:name, :attachment, :dictionary)
-      #params.require(:sampa).permit(:name, :attachment => [])
-    #params.require(:sampa).permit(:name)
+  end
+
+  def log_in
+    redirect_to help_path unless helpers.logged_in?
   end
 end

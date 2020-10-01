@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :log_in
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -70,5 +71,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :password, :email, :user_id, :dictionary_id)
+    end
+
+    def log_in
+      redirect_to help_path unless helpers.logged_in?
     end
 end

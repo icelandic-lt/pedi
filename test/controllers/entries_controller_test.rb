@@ -2,16 +2,27 @@ require 'test_helper'
 
 class EntriesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    log_in_as(users(:usera), password: 'AGeheim')
+
     @entry = entries(:bera)
     @dictionary = Dictionary.find_by_name('Dict1')
+    user = User.find_by_name('NameAA')
     @aNewEntry = Entry.new( word: 'bera2',
                             sampa: 'b E: r a 2',
                             comment: '',
-                            user_id: User.find_by_name('NameAA'),
-                            dictionary_id: @dictionary)
+                            user_id: user.id,
+                            dictionary_id: @dictionary.id,
+                            pos: 'none',
+                            lang: 'IS',
+                            is_compound: false,
+                            comp_part: 'none',
+                            prefix: false,
+                            dialect: 'all')
+    assert(@aNewEntry.valid?)
   end
 
   test "should get index" do
+
     get dictionary_entries_url(@dictionary)
     assert_response :success
   end
@@ -24,13 +35,22 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
   test "should create entry" do
     assert_difference('Entry.count') do
       post dictionary_entries_url(@dictionary),
-            params: { entry: {
-            word: @aNewEntry.word,
-            sampa: @aNewEntry.sampa,
-            comment: @aNewEntry.comment,
-            user_id: User.find_by_name('NameAA').id,
-            dictionary_id: @dictionary.id}
-      }
+        params: { entry: {
+          word: @aNewEntry.word,
+          sampa: @aNewEntry.sampa,
+          comment: @aNewEntry.comment,
+          user_id: User.find_by_name('NameAA').id,
+          dictionary_id: @dictionary.id,
+          finished: false,
+          warning: false,
+          pos: @aNewEntry.pos,
+          lang: @aNewEntry.lang,
+          is_compound: @aNewEntry.is_compound,
+          comp_part: @aNewEntry.comp_part,
+          prefix: @aNewEntry.prefix,
+          dialect: @aNewEntry.dialect,
+          }
+        }
     end
 
     assert_redirected_to dictionary_entry_url(@dictionary, Entry.last)
@@ -52,7 +72,14 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
         sampa: 'b E: r a 2',
         comment: '',
         user_id: User.find_by_name('NameAA').id,
-        dictionary_id: @dictionary.id}
+        dictionary_id: @dictionary.id,
+        pos: 'none',
+        lang: 'DE',
+        is_compound: false,
+        comp_part: 'none',
+        prefix: false,
+        dialect: 'all'
+      }
     }
     assert_redirected_to dictionary_url(@dictionary)
   end
