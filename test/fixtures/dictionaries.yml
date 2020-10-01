@@ -2,7 +2,16 @@
 
 dict1:
   name: Dict1
+  sampa: sampa1
+  version: 2
 
 
 dict2:
   name: Dict2
+  sampa: sampa1
+  version: 2
+
+dict3:
+  name: Dict3
+  sampa: sampa2
+  version: 2

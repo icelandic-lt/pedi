@@ -8,7 +8,7 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    
     <%= render 'layouts/shim' %>
   </head>
 
@@ -20,5 +20,6 @@
     <% end %>
     <%= yield %>
   </div>
+  <%= javascript_pack_tag 'custom', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

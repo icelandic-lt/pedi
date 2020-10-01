@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import './bootstrap_custom.scss';
-@import  './custom';
+@import 'bootstrap';
+@import "./custom.scss";
+@import "./filter.scss";
 

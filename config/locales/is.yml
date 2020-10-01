@@ -1,0 +1,100 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+is:
+  Are you sure?: "Ertu viss?"
+  Back: "til baka"
+  Comment: "Athugasemd"
+  Component part: "Orðhluti"
+  component part: "Orðhluti"
+  Component Part: "Orðhluti"
+  compound: "Samsett orð"
+  Compound: "Samsett orð"
+  compound part: "hluti samsetts orðs"
+  Contact: "Upplýsingar"
+  Correct: "Yfirfarið"
+  Destroy: "Eyða"
+  Dialect: "Tilbrigði"
+  Dictionaries: "Orðalistar"
+  dictionary: "Orðalisti"
+  Dictionary: "Orðalisti"
+  Email: "Netfang"
+  EMail: "Netfang"
+  Entries: "Færslur"
+  entries: "færslur"
+  Entry: "Færsla"
+  Edit: "breyta"
+  Editing Dictionary: "Breyta orðalista"
+  export: "flytja út"
+  Export selected: "flytja út valið"
+  Export Selected: "flytja út valið"
+  Filter: "sía niðurst."
+  filtered of overall: "af alls"
+  Finished: "lokið"
+  (forgot password): "(Gleymt likilorð)"
+  has prefix: "hefst á forskeyti"
+  Info: "Upplýsingar"
+  is compound: "er samsett orð"
+  Lang: "Tungumál"
+  Login: "skrá inn"
+  Log out: "skrá út"
+  Logout: "skrá út"
+  Modified: "breytt"
+  My profile: "Mínar upplýsingar"
+  Name: "Heiti"
+  New Dictionary: "Nýr orðalisti"
+  New Entry: "Ný færsla"
+  Only warnings: "(sýna) aðeins villuskilaboð"
+  Password: "Lykil orð"
+  Phonemes: "Fónem"
+  Pos: "orðflokkur"
+  POS: "orðflokkur"
+  Prefix: "Forskeyti"
+  prohibited this dictionary from being saved: "kom í veg fyrir vistun orðalista"
+  Remember me: "Muna aftir mér"
+  SAMPA: "SAMPA"
+  Sampa: "Sampa"
+  SAMPA Lists: "SAMPA listar"
+  SAMPA lists: "SAMPA listar"
+  Select all: "Velja allt"
+  Select SAMPA list: "Velja SAMPA lista"
+  Show: "sýna"
+  Showing: "sýnir"
+  Subtitle: "Tól til vinnslu framburðarorðabóka"
+  Update entry: "Uppfæra færslu"
+  With warnings: "með viðvörunum"
+  Word: "Orð"
+  x entries: "x færslur"
+
+  activerecord:
+    errors:
+      messages:
+        attached: ": no file has been attached"

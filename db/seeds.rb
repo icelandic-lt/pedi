@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'csv'
-
 seeded_users = [
     {
         name: 'admin',
@@ -29,38 +27,28 @@ seeded_sampa = {
 #
 seeded_users.each do |a_user|
   user = User.find_by(email: a_user[:email])
-  if !user
-    User.create!(name: a_user[:name],
-                 email: a_user[:email],
-                 password: a_user[:password],
-                 password_digest: User.digest(a_user[:password]),
-                 activated: a_user[:activated],
-                 activated_at: a_user[:activated_at])
+  unless user
+    user = User.create!(name: a_user[:name],
+                        email: a_user[:email],
+                        password: a_user[:password],
+                        password_digest: User.digest(a_user[:password]),
+                        activated: a_user[:activated],
+                        activated_at: a_user[:activated_at])
   end
+  Current.user = user
 end
 
 sampa = Sampa.find_by(name: seeded_sampa[:name])
-if !sampa
+unless sampa
   sampa = Sampa.create!(name: seeded_sampa[:name],
-                phonemes: seeded_sampa[:phonemes])
+                        phonemes: seeded_sampa[:phonemes])
 end
 
+test_dict = Rails.root.join('sample-data', 'pedi_extended_test.csv')
 dict_name =  'TestDict'
 a_dict = Dictionary.find_by(name: dict_name)
-if !a_dict
-  a_dict = Dictionary.create!(name: dict_name, sampa_id: sampa.id)
+unless a_dict
+  uf = ActionDispatch::Http::UploadedFile.new(filename: 'pedi_extended_test.csv', type: 'text/plain', tempfile: test_dict)
+  Dictionary.create!(name: dict_name, sampa_id: sampa.id, import_data: uf)
 end
 
-seeded_entries = CSV.read(File.dirname(__FILE__)+'/../sample-data/pron_dict_test.txt', headers: true, col_sep: "\t")
-
-# XXX DS: move reading of CSV file into entry model
-seeded_entries.each do |csv|
-  an_entry = Entry.find_by_word(csv['word'])
-  if (!an_entry)
-    Entry.create!(word: csv['word'],
-                  sampa: csv['sampa'],
-                  comment: '',
-                  user_id: User.first.id, 
-                  dictionary_id: a_dict.id)
-  end
-end

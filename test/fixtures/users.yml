@@ -4,10 +4,17 @@ usera:
   name: NameAA
   password: AGeheim
   password_digest: <%= BCrypt::Password.create('AGeheim') %>
-  email: A@gb.de
+  email: a@gb.de
+  activated: true
 
 userb:
   name: NameBB
   password: BGeheim
   password_digest: <%= BCrypt::Password.create('BGeheim') %>
-  email: B@gb.de
+  email: b@gb.de
+  activated: true
+
+userc:
+  name: admin
+  password: admin@example.com
+  password_digest: <%= BCrypt::Password.create('admin_password') %>

@@ -1,33 +1,6 @@
-/*! `Greyson` Bootstrap 4 theme */
-@import url(https://fonts.googleapis.com/css?family=Muli:200,300,400,700);
-@import "bootstrap";
 
-$font-family-base:Muli;
-
-$enable-grid-classes:false;
-$primary:#2f3c48;
-$secondary:#6f7f8c;
-$success:#3e4d59;
-$danger:#cc330d;
-$info:#5c8f94;
-$warning:#6e9fa5;
-$light:#eceeec;
-$dark:#1e2b37;
-$gray-medium-light: #eaeaea;
-$button-blue: #005493;
-$button-hover: #0078D8;
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-}
-
-/* universal */
-
+@import "./config.scss";
 body {
-  padding-top: 0px;
   background-color: #F7F7F7;
 }
 
@@ -48,9 +21,6 @@ textarea {
   }
 }
 
-.btn {
-  margin-top: 20px;
-}
 
 /* typography */
 
@@ -68,17 +38,10 @@ h1 {
   /*padding-bottom: 70px;*/
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-medium-light;
-}
+
 
 p {
-  font-size: 1.1em;
+  font-size: 1.1em; 
   line-height: 1.7em;
 }
 
@@ -100,175 +63,194 @@ p {
   }
 }
 
-.question_form {
-  float: left;
-  width: 80%;
-  padding-top: 80px;
-  padding-left: 100px;
-  .question-title h1 {
-    font-family: 'Quicksand', 'Arial';
-    font-size: 40px;
-    padding-bottom: 30px;
-    padding-top: 70px;
-  }
-  #question_content, #question_answer {
-    margin-top: 30px;
-    height: 80px;
-    font-size: 20pt;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 0px;
+.navbar{
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+}
 
+
+
+
+body{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+
+.pagination{
+  margin: 0 auto;
+}
+
+.dictionary-info{
+  margin-bottom: 20px;
+  color: $secondary;
+}
+
+.divTableHeading{
+  font-weight: 600;
+
+  .divTableRow{
+    grid-template-columns: 1fr 2fr  20px 20px;
   }
 
-  .btn {
-    width: 40%;
-    font-size: 20pt;
-    margin: 0;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
-    background-color: $button-blue;
-    &:hover {
-      background-color: $button-hover;
-      text-decoration: none;
+  .divTableHead{
+    &.-center{
+      justify-self: center;
     }
   }
 
+  
 }
 
-
-/* sidebar */
-
-/*aside {
-  float: right;
-  width: 20%;*/
-.username {
-  float: right;
-}
-.user_info {
-  margin-top: 20px;
-  width: 20%
-}
-section {
-  padding: 10px 0;
-  margin-top: 20px;
-  &:first-child {
-    border: 0;
-    padding-top: 0;
-  }
-  span {
-    display: block;
-    margin-bottom: 3px;
-    line-height: 1;
-  }
-  h1 {
-    font-size: 1.4em;
-    text-align: left;
-    letter-spacing: -1px;
-    margin-bottom: 3px;
-    margin-top: 0px;
-  }
-}
-/*}*/
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+.divTableBody{
   width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+  margin-bottom: 50px;
+  
 }
 
-input {
-  height: auto !important;
+.entry{
+ 
+  &.edit{
+    .divTableRow:first-child{
+      display: none;
+    }
+   }
 }
 
-.placeholder:not(:focus) {
-  font-style: italic;
-}
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error !optional;
-  .form-control {
-    color: $danger;
-  }
-}
-
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
-.question {
-  margin-right: 60px;
-  border-bottom: 2px solid $gray-medium-light;
-}
-
-.questions {
-  float: left;
-  width: 80%;
-  padding-left: 50px;
-}
-
-.answer {
-  font-style: italic;
-  padding-bottom: 5px;
-}
-.edit_link {
-  color: green;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.delete_link {
-  color: red;
-}
-
-.edit_field {
-  alignment: center;
-  width: 80%;
+.divTableRow{
+  border-bottom:1px solid $gray-medium-light;
+  grid-template-columns: 1fr 2fr 20px 20px ;
   padding: 10px;
-  margin-top: 30px;
-  height: 80px;
-  font-size: 20pt;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 0px;
+  
+  display: grid;
+  grid-column-gap: 20px;
+
+  &.finished{
+    background:rgba(40, 167, 69,0.15);
+  }
+
+  &.warning{
+    background:rgba(220, 53, 69, 0.15);
+  }
+  
+
+  &--form{
+    background: $gray-medium-light;
+    margin-bottom: 10px;
+  }
 }
-.edit_btn {
-  width: 40%;
-  font-size: 20pt;
-  margin: 0;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
-  background-color: $button-blue;
-  &:hover {
-    background-color: $button-hover;
-    text-decoration: none;
+
+.pill{
+  padding: 2px 8px;
+  font-size: 12px;
+  background: #eee;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+
+
+div.divTableCell{
+
+  &__correct{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 4;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__sampa{
+    white-space: nowrap;
+  }
+
+  &__comment{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 3;
+    align-self: center;
+    span{
+      height: 28px;
+      display: block;
+    }
+  }
+
+  &.-row2{
+    padding-bottom: 5px;
+    padding-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    div{
+      margin-right: 10px;
+    }
+  }
+  
+  &.-update{
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    grid-column-start: 4;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+form.divTableCell{
+  position: relative;
+  grid-column-start: 1;  
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 130px;
+  grid-column-gap: 20px;
+
+  .form-check{
+    padding-top: 40px;
+  }
+  
+  .btn{
+    margin-top: 0;
+  }
+
+  .closeRow{
+    background:transparent;
+    border:none;
+    position: absolute;
+    right:10px;
+    top: 0;
+     span {
+      pointer-events: none;
+    }
+  }
+}
+
+
+
+
+@media all and(min-width: 576px){
+  .container{
+    max-width: 750px;
+  }
+}
+
+@media all and(min-width: 768px){
+  .container{
+    max-width: 990px;
+  }
+}
+
+@media all and(min-width: 992px){
+  .container{
+    max-width: 1100px;
+  }
+}
+
+@media all and(min-width: 1140px){
+  .container{
+    max-width: 1200px;
   }
 }

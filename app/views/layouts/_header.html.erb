@@ -14,13 +14,13 @@
       <ul class="navbar-nav mr-auto">
         <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to "Dictionaries", dictionaries_path, class: "nav-link active" %>
+            <%= link_to t('Dictionaries'), dictionaries_path, class: "nav-link active" %>
           </li>
           <li class="nav-item">
-            <%= link_to "SAMPA Lists", sampas_path, class: "nav-link active" %>
+            <%= link_to t('SAMPA Lists'), sampas_path, class: "nav-link active" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Info", help_path, class: "nav-link active" %>
+            <%= link_to t('Info'), help_path, class: "nav-link active" %>
           </li>
         <% end %>
       </ul>
@@ -31,17 +31,27 @@
               <%= current_user.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "My profile", current_user, class: "dropdown-item" %>
+              <%= link_to t('My profile'), current_user, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Logout", logout_path, {method: :delete, class: "dropdown-item" }%>
+              <%= link_to t('Logout'), logout_path, {method: :delete, class: "dropdown-item" }%>
             </div>
           </li>
         <% else %>
-          <li><%= link_to "Login", login_path, class: "nav-link" %></li>
+          <li><%= link_to t('Login'), login_path, class: "nav-link" %></li>
             <li class="nav-item">
-              <%= link_to "Info", help_path, class: "nav-link active" %>
+              <%= link_to t('Info'), help_path, class: "nav-link active" %>
             </li>
         <% end %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= I18n.locale %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'Íslenska', {locale: :is}, class: "dropdown-item"  %>
+            <div class="dropdown-divider"></div>
+            <%= link_to 'English', {locale: :en}, class: "dropdown-item"   %>
+          </div>
+        </li>
         </ul>
     </div>
   </div>

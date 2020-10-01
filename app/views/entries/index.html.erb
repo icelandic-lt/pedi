@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Entries</h1>
+<h2>Entries</h2>
 
 <table class="table">
   <thead>
@@ -19,9 +19,9 @@
         <td><%= entry.sampa %></td>
         <td><%= entry.comment %></td>
         <td><%= entry.updated_at %></td>
-        <td><%= link_to 'Show', dictionary_entry_path(@dictionary, entry) %></td>
-        <td><%= link_to 'Edit', edit_dictionary_entry_path(@dictionary, entry) %></td>
-        <td><%= link_to 'Destroy', dictionary_entry_path(@dictionary, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('Show'), dictionary_entry_path(@dictionary, entry) %></td>
+        <td><%= link_to t('Edit'), edit_dictionary_entry_path(@dictionary, entry) %></td>
+        <td><%= link_to t('Destroy'), dictionary_entry_path(@dictionary, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Entry', new_dictionary_entry_path(@dictionary) %>
+<%= link_to t('New Entry'), new_dictionary_entry_path(@dictionary) %>

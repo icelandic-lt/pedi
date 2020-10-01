@@ -13,8 +13,13 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :dictionaries do
+    collection do
+      post 'export_multiple'
+    end
     post 'export', on: :member
-    resources :entries
+    resources :entries do
+      post 'finalize', on: :member
+    end
   end
   resources :sampas
 

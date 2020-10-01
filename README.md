@@ -8,45 +8,55 @@ Pedi is a web application to read, edit and export pronunciation dictionaries.
 
 A SAMPA list can be imported into the web application. You can find a sample list inside the sample-data/ sub directory.
 
-### Import 2-column CSV text files as pronunciation dictionaries
+### Import CSV text files as pronunciation dictionaries
 
 A dictionary is made up of CSV formatted text and has the following format:
 
-|  **WORD** | **SAMPA PRONUNCIATION**  |
-|---|---|
-|   bera |  b E: r a |
-|   pera |  p E: r a |
-|   dalur |  d a: l Y r |
-|   ... |  ... |
+|  **WORD** | **SAMPA PRONUNCIATION**  | **POS** | **PRON_VARIANT** | **IS_COMPOUND** | **COMPOUND_ATTR** | **HAS_PREFIX** | **LANG** | **IS_VALIDATED** | **COMMENT** |
+|---|---|---|---|---|---|---|---|---|---|
+| hvass | x a s | lo | south_clear | false | none| false | IS | false |
+| einhverri | ei N k_h v E r I | fn | northeast_clear | false | none | false | IS | false | Vantar entry (south) |
+| þurftu | T Y r_0 t Y | so | all | false | none | false | IS | false |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-When importing, the name of the dictionary is set by the user.
-The import functionality saves the dictionary into an internal database table.
+When importing, the name of the dictionary is set by the user. The import functionality saves the dictionary into an internal database table.
 
 
 ### Show overview of dictionaries
 
-Imported dictionaries are shown in a list view with basic statistics like:
-
-- number of entries
-
+Imported dictionaries are shown in a list view with number of entries and options to delete or export them as CSV lists.
 
 ### Show and edit contents of a dictionary
 
 An imported dictionary is organized as list of entries:
 - Word
 - SAMPA pronunciation
+- Editing status
 - Comment
+- Language
+- POS tag
+- Component part
+- Dialect
+- boolean if word is a compound
+- boolean if word starts with a prefix
 
 Entries are shown paginated if they don't fit on a page.
 
 #### Incorrect phonetic transcriptions
 
-If a transcription of an entry is incorrect, there appears a colored yellow marking of
-the incorrect transcription. A violation of the following rules are therefore marked as incorrect:
+If a transcription of an entry is incorrect, there appears a colored yellow marking of the incorrect transcription. A violation of the following rules are therefore marked as incorrect:
 
 - All SAMPA pronunciation symbols have to be separated by a space
 - All symbols have to be part of the well defined SAMPA symbol set
 
+#### Filters
+
+Entries can be filtered via the following criteria:
+
+- Word as Regular Expression
+- SAMPA transcription as Regular Expression
+- Comment as Regular Expression
+- Warnings
 
 #### Editing
 
@@ -54,41 +64,26 @@ It is possible to edit the following attributes of a dictionary entry:
 
 - Word
 - SAMPA pronunciation
+- Editing status
 - Comment
+- Language
+- POS tag
+- Component part
+- Dialect
+- boolean if word is a compound
+- boolean if word starts with a prefix
 
-### Database schema
+### Export SAMPA  dictionaries as CSV text files
 
-The internal database schema is as follows:
-
-#### Dictionary
-
-- Dictionary name
-- Date & time created
-- Date & time last edited (via :updated_at)
-- A correlated Sampa list for Sampa syntax checking
- 
-#### Entry
-
-- Word
-- SAMPA pronunciation
-- Comment
-- User id (created / changed)
-- Modification date/time (created / changed)
-
-#### User
-
-- Name
-- Password
-- EMail
-
-### Export SAMPA  dictionaries as 2-column CSV text files
-
-Every dictionary can be exported to a local file on disk with the same CSV format as described in the import section.
-The dictionary name is preset as local file name.
+Every dictionary can be exported to a local file on disk with the same CSV format as described in the import section. If multiple dictionaries are selected, all of these will be exported into one CSV file.
 
 ### User Authentication
 
 There is a basic user authentication to access the web application. All users share the same rights. Default user and password is admin@example.com/admin_password.
+
+### I8N
+
+The application is available in Icelandic and English. Icelandic is the default language. You can choose either language from a drop-down list at the top right. 
 
 ## Getting started
 
@@ -100,11 +95,23 @@ rails db:migrate
 rails db:seed
 rails server
 ````
+The seed data should be enough to give you an idea how this application works.
 
-The seed data should be enough to give you an idea how this appliction works.
+For subsequents updates of this application, you just need to use these commands:
+
+```bash
+rails db:migrate
+rails server
+```
+
+If you see any problems related to yarn, try to call the following command in a terminal:
+
+```
+yarn install --check-files
+```
 
 After finishing the above steps, you should be able to access the web application on [localhost:3000](http://localhost:3000)
 
 ## Trouble shooting
 
-This is a prototype application. It is still in heavy development. If you encounter any errors, we are glad if you file an issue on the issue tracker or contact us at info@grammatek.com.
+This application is still in development. If you encounter any errors, we are glad if you file an issue on the issue tracker or contact us at info@grammatek.com.

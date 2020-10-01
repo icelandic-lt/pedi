@@ -2,12 +2,25 @@ require "application_system_test_case"
 
 class DictionariesTest < ApplicationSystemTestCase
   setup do
-    @dictionary = dictionaries(:one)
+    @dictionary = dictionaries(:dict1)
+    @user = users(:userc)
+    puts @user.inspect
+    login_as(@user)
+  end
+
+  def login_as(user)
+    visit login_url
+    fill_in "EMail", with: user.email
+    fill_in "Password", with: user.password
+    print page.html
+
+    save_and_open_screenshot
+    click_button "Login"
   end
 
   test "visiting the index" do
     visit dictionaries_url
-    assert_selector "h1", text: "Dictionaries"
+    assert_selector "h2", text: "Dictionaries"
   end
 
   test "creating a Dictionary" do

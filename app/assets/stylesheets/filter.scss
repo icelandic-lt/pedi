@@ -1,0 +1,82 @@
+
+@import "./config.scss";
+.main-filter{
+    position: fixed;
+    top: 62px;
+    left: 50%;
+    width: 100%;
+    padding: 0;
+    background: $gray-medium-light;
+    transform: translateY(-100%) translateX(-50%);
+    transition: transform 300ms , opacity 300ms 100ms;
+    opacity: 0;
+    z-index: 0;
+    width: 80%;
+    box-shadow: 0 30px 60px rgba(0,0,0,.06);
+
+  
+    .filter-open &{
+        transform: translateY(0) translateX(-50%);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    form{
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .form-group.-checkbox{
+        padding-top: 40px;
+    }
+}
+
+.filter-trigger{
+    position: fixed;
+    left: 10px;
+    top: 72px;
+
+    button{
+        background: transparent;
+        border: none;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+
+        svg{
+            width: 32px;
+            height: 32px;
+            
+        }
+
+        &:focus{
+            outline: none;
+            svg{
+                path{
+                    fill: $button-blue;
+                }
+            }
+        }
+    } 
+    .filter-open &{
+        button{
+            svg{
+                path{
+                    fill: $button-blue;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .main-filter{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .main-filter{
+        max-width: 1140px;
+    }
+}

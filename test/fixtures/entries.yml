@@ -6,6 +6,14 @@ bera:
   comment: ''
   user: usera
   dictionary: dict1
+  finished: false
+  warning: false
+  pos: 'none'
+  lang: 'IS'
+  is_compound: false
+  comp_part: 'none'
+  prefix: false
+  dialect: 'all'
 
 dalur:
   word: dalur
@@ -13,6 +21,14 @@ dalur:
   comment: 'Comment for dalur'
   user: usera
   dictionary: dict2
+  finished: false
+  warning: false
+  pos: 'none'
+  lang: 'IS'
+  is_compound: false
+  comp_part: 'none'
+  prefix: false
+  dialect: 'all'
 
 pera:
   word: pera
@@ -20,3 +36,26 @@ pera:
   comment: 'Comment for pera'
   user: userb
   dictionary: dict1
+  finished: false
+  warning: false
+  pos: 'none'
+  lang: 'IS'
+  is_compound: false
+  comp_part: 'none'
+  prefix: false
+  dialect: 'all'
+
+afstrakts:
+  word: afstrakts
+  sampa: 'a v s t r a k t s'
+  comment: 'none'
+  user: usera
+  dictionary: dict1
+  finished: false
+  warning: false
+  pos: 'none'
+  lang: 'IS'
+  is_compound: false
+  comp_part: 'none'
+  prefix: false
+  dialect: 'all'

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       if user.activated?
         helpers.log_in user
         params[:session][:remember_me] == '1' ? helpers.remember(user) : helpers.forget(user)
-        #redirect_back_or user
+        Current.user = helpers.current_user
         redirect_to root_url
       else
         message  = "Activation not yet done. "

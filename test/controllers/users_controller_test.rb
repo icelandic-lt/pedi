@@ -2,7 +2,8 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = users(:usera)
+    log_in_as(users(:usera), password: 'AGeheim')
+    @user = users(:userb)
     @aNewUser = User.new(name: 'ANewUser',
                      password: 'AGeheim',
                      password_digest: BCrypt::Password.create('AGeheim'),

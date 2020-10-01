@@ -1,0 +1,285 @@
+WORD	SAMPA	POS	PRON_VARIANT	IS_COMPOUND	COMPOUND_ATTR	HAS_PREFIX	LANG	IS_VALIDATED	COMMENT
+framkvæmdastjórnarinnar	f r a m k_h v ai m t a s t j ou r t n a r I n a r	n	standard_clear	true	none	false	IS	false	Vantar entry (cas, sleppa r?)
+botngjarðirnar	p O h t n_0 c a r D I r t n a r	n	standard_clear	true	none	false	IS	false	Vantar entry (cas, sleppa r?)
+Arnartanga	a r t n a r t_h au N k a	ns	standard_clear	true	none	false	IS	false	Vantar entry (cas, sleppa r?)
+Dagbjartsson	t a: G p j a r_0 t s O n	ns	standard_clear	true	none	false	IS	false	""
+Dagbjartsson	t a: G p j a r_0 s O n	ns	standard_cas	true	none	false	IS	false	Ofaukið
+hvolfdi	x O l t I	so	south_clear	false	none	false	IS	false	Ofaukið
+hvetjandi	k_h v E t j a n t I	lo	standard_clear	false	none	false	IS	false	Vantar entry (south)
+hvaleyrarholtsvelli	x a: l ei r a r h O l_0 t s v E t l I	ns	south_clear	true	none	false	IS	false	""
+hvass	x a s	lo	south_clear	false	none	false	IS	false	""
+einhverri	ei N k_h v E r I	fn	northeast_clear	false	none	false	IS	false	Vantar entry (south)
+þurftu	T Y r_0 t Y	so	all	false	none	false	IS	false	""
+þarfnaðist	T a r t n a D I s t	so	all	false	none	false	IS	false	""
+vönkuð	v 9i N k_h Y D	lo	northeast_clear	false	none	false	IS	false	""
+tungltímatal	t_h u N l t_h i m a t_h a l	n	all	true	none	false	IS	false	""
+velktist	v E l_0 t I s t	so	all	false	none	false	IS	false	""
+vatnsborðið	v a s p O r D I D	n	all	true	none	false	IS	false	""
+tungltímatal	t_h u N l t_h i m a t_h a: l	adv	standard_clear	true	none	false	IS	false	Ofaukið
+tanks	t_h au N k_h s	n	northeast_clear	false	none	false	IS	false	""
+talsverður	t_h a l s v E r D Y r	lo	all	false	none	false	IS	false	""
+sterkstraumshluti	s t E r_0 s t r 9i m s l_0 Y t_h I	n	north_cas	true	none	false	IS	false	""
+sterkstraumshluti	s t E r_0 k s t r 9i m s l_0 Y t_h I	n	north_clear	true	none	false	IS	false	""
+sterkstraumshluti	s t E r_0 s t r 9i m s l_0 Y t I	n	standard_cas	true	none	false	IS	false	""
+sterkstraumshluti	s t E r_0 k s t r 9i m s l_0 Y t I	n	standard_clear	true	none	false	IS	false	""
+smokkfisksins	s m O h k f I s I n s	n	standard_cas	true	none	false	IS	false	""
+skrapp	s k r a h p	so	all	false	none	false	IS	false	""
+skiptinemi	s c I f t I n E m I	n	all	true	none	false	IS	false	""
+sjónvarpstæki	s j ou n v a r_0 p s t_h ai c_h I	n	north_clear	true	none	false	IS	false	Vantar north cas, án p?
+sjónvarpstæki	s j ou n v a r_0 s t_h ai c I	n	standard_cas	true	none	false	IS	false	""
+sjónvarpsstöðina	s j ou n v a r_0 s t 9 D I n a	n	standard_cas	true	none	false	IS	false	""
+sjálfsbjargarviðleitnin	s j au l f s p j a r k a r v I D l ei h t n I n	n	standard_clear	true	none	false	IS	false	""
+sjálfsbjargarviðleitnin	s j au l s p j a r k a r v I D l ei h t n I n	n	standard_cas	true	none	false	IS	false	""
+Ríkisútvarpið	r i: c_h I s u t_h v a r_0 p I D	ns	north_clear	true	none	false	IS	false	""
+Ríkisútvarpið	r i: c I s u t v a r_0 p I D	ns	standard_clear	true	none	false	IS	false	""
+plata	p_h l a: t_h a	so	north_clear	false	none	false	IS	false	""
+plata	p_h l a: t a	so	standard_clear	false	none	false	IS	false	""
+plata	p_h l a: t_h a	n	north_clear	false	head	false	IS	false	""
+pínulitlir	p_h i: n Y l I h t l I r	lo	all	true	none	false	IS	false	""
+óþekkt	ou: T E x t	lo	standard_clear	true	none	true	IS	false	Vantar entry (harðmæli) ?
+óþekkt	ou: T E x t	n	standard_clear	true	none	true	IS	false	Vantar entry (harðmæli) ?
+Ólafsvíkur	ou: l a f s v i k_h Y r	ns	north_clear	true	none	false	IS	false	""
+Ólafsvíkur	ou: l a f s v i k Y r	ns	standard_clear	true	none	false	IS	false	""
+ofuráherslu	O: v Y r au h E r_0 s t l Y	n	all	true	none	false	IS	false	""
+nefndarmönnum	n E m t a r m 9 n Y m	n	all	true	none	false	IS	false	""
+morgna	m O r t n a	n	all	false	head	false	IS	false	""
+morgna	m O r t n a	so	all	false	none	false	IS	false	""
+misjafnt	m I: s j a m_0 t	ao	all	true	none	true	IS	false	""
+misjafnt	m I: s j a m_0 t	lo	all	true	none	true	IS	false	""
+lyngbak	l i N p a k	n	all	true	none	false	IS	false	""
+marktækt	m a r_0 t ai x t	lo	standard_cas	true	none	false	IS	false	Óviss - vantar e.t.v. entry fyrir harðmæli og standard_clear??
+marktækifæri	m a r_0 k t_h ai c I f ai r I	n	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli) (c_h)
+margt	m a r_0 t	lo	all	false	head	false	IS	false	""
+margt	m a r_0 t	ao	all	false	head	false	IS	false	""
+lygndi	l i N t I	so	all	false	none	false	IS	false	""
+lyfjafræðingur	l I v j a f r ai D i N k Y r	n	all	true	none	false	IS	false	""
+loftsal	l O f t s a l	n	all	true	none	false	IS	false	""
+listaverkum	l I s t a v E r_0 k Y m	n	all	true	head	false	IS	false	""
+Laugavegi	l 9i: G a v ei j I	ns	all	true	none	false	IS	false	Vantar kannski cas, l 9i: a v ei j I ?
+lambsull	l a m p s Y t l	n	all	true	none	false	IS	false	""
+lakk	l a h k	n	all	false	both	false	IS	false	""
+labb	l a p	n	all	false	none	false	IS	false	""
+kvikmyndasjóði	k_h v I: k m I n t a s j ou D I	ns	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli) ?
+krossferð	k_h r O s f E r D	n	all	true	none	false	IS	false	""
+konung	k_h O: n u N k	n	all	false	both	false	IS	false	""
+komplíss	k_h O m_0 p l i s	n	standard_clear	false	none	false	IS	false	Óvenjulegt orð, ekki hugmynd um POS. Vantar f. NE?
+klerksins	k_h l E r_0 s I n s	n	standard_cas	false	none	false	IS	false	""
+kjarakaup	c_h a: r a k_h 9i p_h	n	north_clear	true	none	false	IS	false	""
+kippti	c_h I f t I	so	all	false	none	false	IS	false	""
+kerjum	c_h E r j Y m	n	all	false	none	false	IS	false	""
+keppti	c_h E f t I	so	all	false	none	false	IS	false	""
+kennslubækur	c_h E n s t l Y p ai k Y r	n	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli)
+kennarasambandsins	c_h E n a r a s a m p a n t s I n s	adv	standard_clear	true	none	false	IS	false	Ofaukið
+kennarasambandsins	c_h E n a r a s a m p a n t s I n s	n	all	true	none	false	IS	false	""
+Kársnesi	k_h au r_0 s n E s I	ns	all	true	none	false	IS	false	""
+Karlsdóttur	k_h a r t l s t ou h t Y r	ns	all	true	none	false	IS	false	""
+karlfólk	k_h a r t l f ou l_0 k	n	standard_clear	true	none	false	IS	false	Vantar entry (NE)
+kallast	k_h a t l a s t	so	all	false	none	false	IS	false	""
+kaffikompunni	k a f I k O m p Y n I	adv	standard_clear	false	none	false	IS	false	Ofaukið
+kaffikompunni	k_h a f I k_h O m p_h Y n I	n	northeast_clear	true	none	false	IS	false	""
+kaffikompunni	k_h a f I k_h O m_0 p Y n I	n	standard_clear	true	none	false	IS	false	""
+kaffihúsin	k_h a f I h u s I n	n	all	true	head	false	IS	false	""
+kaffibollum	k_h a f I p O t l Y m	n	all	true	none	false	IS	false	""
+íþróttafólk	i: T r ou h t a f ou l_0 k	n	all	true	head	false	IS	false	""
+ísfisktogaranum	i: s f I s t_h O G a r a n Y m	n	all	true	none	false	IS	false	Óviss - kannski er þetta cas og þá vantar clear?
+inngangs	I N k au N s	n	all	true	modifier	false	IS	false	""
+innanríkisráðherra	I n a n r i c_h I s r au: D h E r a	n	north_clear	true	none	false	IS	false	""
+innanríkisráðherra	I n a n r i c I s r au D h E r a	n	standard_clear	true	none	false	IS	false	""
+hvolfdi	k_h v O l t I	so	all	false	none	false	IS	false	""
+hvetjandi	k_h v E t j a n t I	so	standard_clear	false	none	false	IS	false	Vantar entry (south)
+hvetjandi	k_h v E t_h j a n t I	so	north_clear	false	none	false	IS	false	""
+hvetjandi	k_h v E t_h j a n t I	lo	north_clear	false	none	false	IS	false	""
+hvass	k_h v a s	lo	all	false	none	false	IS	false	""
+hvaleyrarholtsvelli	k_h v a: l E j r a r h O l_0 t s v E t l I	adv	standard_clear	true	none	false	IS	false	Ofaukið
+hvaleyrarholtsvelli	k_h v a: l ei r a r h O l_0 t s v E t l I	ns	standard_clear	true	none	false	IS	false	Vantar entry (cas, sleppa t?)
+hryggigt	r_0 I c I x t	n	all	true	none	false	IS	false	""
+hringtorg	r_0 i N t_h O r k	n	all	true	none	false	IS	false	""
+Hrafns	r_0 a p n_0 s	ns	all	false	modifier	false	IS	false	""
+hraðaksturs	r_0 a: D a k s t Y r_0 s	n	all	true	modifier	false	IS	false	""
+hópvinnu	h ou: p v I n Y	n	standard_clear	true	modifier	false	IS	false	Vantar entry (harðmæli) ?
+Hollustuverndar	h O t l Y s t Y v E n t a r	n	standard_cas	true	none	false	IS	false	""
+Hollustuverndar	h O t l Y s t Y v E r n t a r	ns	standard_clear	true	none	false	IS	false	""
+hófum	h ou: v Y m	so	all	false	none	false	IS	false	""
+hófum	h ou: v Y m	n	all	false	none	false	IS	false	""
+hnakkanum	n_0 a h k a n Y m	n	all	false	none	false	IS	false	""
+hlunki	l_0 u J c_h I	so	northeast_clear	false	none	false	IS	false	so - NE
+hlunki	l_0 u J c_h I	n	northeast_clear	false	none	false	IS	false	n - NE
+hljótt	l_0 j ou h t	lo	all	false	none	false	IS	false	""
+hlerum	l_0 E: r Y m	n	all	false	head	false	IS	false	""
+hlerum	l_0 E: r Y m	so	all	false	none	false	IS	false	""
+hlammaði	l_0 a m a D I	so	all	false	none	false	IS	false	""
+hjúkrunarráð	C u k r Y n a r au D	n	all	true	none	false	IS	false	""
+hjartans	C a r_0 t a n s	n	all	false	none	false	IS	false	""
+hjálpsamra	C au l p_h s a m r a	lo	northeast_clear	true	none	false	IS	false	Óviss - Er þetta kannski ekki hægt?
+hjálpsamra	C au l_0 p s a m r a	lo	standard_clear	true	none	false	IS	false	""
+hjálparsögninni	C au l p_h a r s 9 k n I n I	n	northeast_clear	true	none	false	IS	false	""
+hjálparsögninni	C au l_0 p a r s 9 k n I n I	n	standard_clear	true	none	false	IS	false	""
+hjálmsdýpis	C au l m s t i p_h I s	ns	north_clear	false	none	false	IS	false	""
+hjálmsdýpis	C au l m s t i p I s	ns	standard_clear	true	none	false	IS	false	""
+hinnar	h I n a r	fn	all	false	none	false	IS	false	""
+hiklausan	h I: k l 9i s a n	lo	all	true	none	false	IS	false	Óviss - vantar entry fyrir harðmæli hér?
+herréttinum	h E r j E h t I n Y m	n	all	true	none	false	IS	false	""
+herstjóri	h E r_0 s t j ou r I	n	all	true	none	false	IS	false	""
+herptar	h E r_0 t a r	lo	all	false	none	false	IS	false	""
+herptar	h E r_0 t a r	so	all	false	none	false	IS	false	""
+herpresturinn	h E: r p_h r E s t Y r I n	n	all	true	none	false	IS	false	""
+héldust	C E l t Y s t	so	all	false	none	false	IS	false	""
+heimsmeistarakeppnina	h ei m s m ei s t a r a c_h E h p n I n a	n	all	true	none	false	IS	false	""
+heimill	h ei: m I t l_0	lo	all	false	none	false	IS	false	""
+heimilislækna	h ei: m I l I s l ai h k n a	n	all	true	none	false	IS	false	""
+heima	h ei: m a	n	all	false	both	false	IS	false	""
+heilbrigðisyfirvalda	h ei l p r I G D I s I v I r v a l t a	n	all	true	none	false	IS	false	""
+hápunkti	h au: p_h u n t_h I	n	northeast_clear	true	none	false	IS	false	""
+hálfrökkrinu	h au l r 9 h k r I n Y	n	standard_cas	false	none	false	IS	false	""
+hálfrökkrinu	h au l v r 9 h k r I n Y	n	standard_clear	true	none	false	IS	false	""
+gullstrandarinnar	k Y t l s t r a n t a r I n a r	n	all	true	none	false	IS	false	""
+guðleysingjar	k v Y D l ei s i J c a r	n	all	true	none	false	IS	false	""
+grillur	k r I t l Y r	n	all	false	none	false	IS	false	""
+glapræði	k l a: p r ai D I	n	all	true	none	false	IS	false	""
+glæsilegt	k l ai: s I l E x t	lo	all	false	none	false	IS	false	""
+Gjábakki	c au: p a h c I	ns	all	true	none	false	IS	false	""
+gírstönginni	c i: r s t 9i N k I n I	n	all	false	none	false	IS	false	""
+gilbert	c I l p E r_0 t	ns	all	false	none	false	IS	false	""
+geirvörtur	c ei: r v 9 r_0 t Y r	n	all	true	none	false	IS	false	""
+gegnt	c ei N_0 t	so	all	false	none	false	IS	false	""
+gegnt	c ei N_0 t	lo	all	false	none	false	IS	false	""
+gaur	k 9i: r	n	all	false	none	false	IS	false	""
+gagnstæða	k a x s t ai D a	n	standard_cas	false	none	true	IS	false	""
+gagnstæða	k a x s t ai D a	lo	standard_cas	false	none	true	IS	false	""
+gaddakylfu	k a t a c_h I l v Y	n	all	true	none	false	IS	false	""
+fylgdust	f I l t Y s t	so	all	false	none	false	IS	false	""
+fullorðnum	f Y t l O r t n Y m	lo	all	false	none	false	IS	false	""
+Freysteinn	f r ei: s t ei t n	ns	all	false	none	false	IS	false	""
+fréttnæmt	f r j E h t n ai m_0 t	lo	standard_clear	true	none	false	IS	false	Vantar entry (NE) ?
+fréttatengdir	f r j E h t a t_h ei N t I r	lo	all	true	none	false	IS	false	""
+framúrskarandi	f r a m u r s k a r a n t I	lo	all	true	none	false	IS	false	""
+Framsóknarflokks	f r a m s ou h k n a r f l O k s	ns	all	true	none	false	IS	false	""
+framlengdur	f r a m l ei N t Y r	lo	all	false	none	false	IS	false	""
+framlengdur	f r a m l ei N t Y r	so	all	false	none	false	IS	false	""
+framhaldsskólakennarinn	f r a m h a l t s k ou: l a c E n a r I n	n	standard_clear	false	none	false	IS	false	Ofaukið
+framhaldsskólakennarinn	f r a m h a l t s k ou l a c_h E n a r I n	n	all	true	none	false	IS	false	""
+forlaginu	f O r l ai j I n Y	n	all	false	head	true	IS	false	""
+fólksbíla	f ou l s p i l a	n	standard_cas	true	modifier	false	IS	false	""
+flutningsstarfsemi	f l Y h t n i N s t a r s E m I	n	standard_cas	true	none	false	IS	false	""
+flutningsstarfsemi	f l Y h t n i N s t a r v s E m I	n	standard_clear	true	none	false	IS	false	""
+flutningnum	f l Y h t n i N k n Y m	n	all	false	head	false	IS	false	""
+flúormengun	f l u: O r m ei N k Y n	n	all	true	none	false	IS	false	""
+flóttamönnum	f l ou h t a m 9 n Y m	n	all	true	head	false	IS	false	""
+fljótvirkur	f l j ou: t v I r_0 k Y r	lo	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli) ?
+fljótið	f l j ou: t_h I D	so	north_clear	false	none	false	IS	false	""
+fljótið	f l j ou: t_h I D	n	north_clear	false	head	false	IS	false	""
+fljótið	f l j ou: t I D	n	standard_clear	false	head	false	IS	false	""
+flestallt	f l E s t a l_0 t	fn	all	true	none	false	IS	false	""
+fernt	f E n_0 t	lo	all	false	none	false	IS	false	""
+félagslynd	f j E: l a k s t l I n t	lo	all	true	none	false	IS	false	""
+fangelsisvistar	f au J c E l s I s v I s t a r	n	all	true	none	false	IS	false	""
+ernst	E r n s t	ns	all	false	none	false	IS	false	Vantar entry (cas, sleppa r?)
+enskt	E n s t	lo	all	false	none	false	IS	false	""
+Englendingar	ei N l E n t i N k a r	n	all	false	none	false	IS	false	""
+englaborg	ei N l a p O r k	n	all	true	none	false	IS	false	""
+endurskipulagning	E n t Y r s c I p_h Y l a k n i N k	n	north_clear	false	none	true	IS	false	""
+endurskipulagning	E n t Y r s c I p Y l a k n i N k	n	standard_clear	true	none	true	IS	false	""
+ekkjur	E h c Y r	n	all	false	head	false	IS	false	""
+einkavæðingar	ei N k_h a v ai D i N k a r	n	northeast_clear	true	modifier	true	IS	false	""
+einkafyrirtæki	ei N k_h a f I r I r t_h ai c_h I	n	northeast_clear	true	none	true	IS	false	""
+ekki	E h c I	n	all	false	none	false	IS	false	""
+einhverri	ei N_0 k v E r I	fn	standard_clear	false	none	false	IS	false	Óviss
+eignarskatt	ei k n a s k a h t	n	standard_cas	true	none	false	IS	false	""
+eignarskatt	ei k n a r_0 s k a h t	n	standard_clear	true	head	false	IS	false	""
+eggið	E c I D	so	all	false	none	false	IS	false	(Væntanlega allt í lagi þó hér sé bara so. og ekki no. ? )
+efldist	E l t I s t	so	standard_cas	false	none	false	IS	false	""
+dirfðist	t I r D I s t	so	all	false	none	false	IS	false	""
+Digraneskirkju	t I G r a n E s c_h I r_0 c Y	ns	all	true	none	false	IS	false	""
+dásamlegt	t au: s a m l E x t	lo	all	true	none	false	IS	false	""
+byggðaþróun	p I G D a T r ou Y n	n	all	true	none	false	IS	false	""
+Búnaðarbankans	p u: n a D a r p au N k_h a n s	ns	northeast_clear	true	none	false	IS	false	""
+Búnaðarbankans	p u: n a D a r p au N_0 k a n s	ns	standard_clear	true	none	false	IS	false	""
+búkarnir	p u: k_h a r t n I r	n	north_clear	false	none	false	IS	false	""
+Brynka	p r i N k_h a	ns	northeast_clear	false	none	false	IS	false	""
+Brynka	p r i N_0 k a	ns	standard_clear	false	none	false	IS	false	""
+brúðkaupsdaginn	p r u D k_h 9i p s t ai j I n	n	all	true	none	false	IS	false	""
+bronsverðlaun	p r O n s v E r l 9i n	n	all	true	none	false	IS	false	""
+brjóstkassa	p r j ou s k_h a s a	n	all	true	none	false	IS	false	""
+brettaferð	p r E h t a f E r D	n	all	true	head	false	IS	false	""
+borgarfulltrúi	p O r k a r f Y t l t r u I	n	all	true	head	false	IS	false	""
+bólgnar	p ou l n a r	so	all	false	none	false	IS	false	""
+bólgnar	p ou l n a r	lo	all	false	none	false	IS	false	""
+birgðastöðinni	p I r D a s t 9 D I n I	n	all	true	head	false	IS	false	""
+Benediktsdóttur	p E: n E t I x s t ou h t Y r	ns	standard_cas	true	none	false	IS	false	""
+Benediktsdóttur	p E: n E t I x t s t ou h t Y r	ns	standard_clear	true	none	false	IS	false	""
+barmafullt	p a r m a f Y l_0 t	lo	all	true	none	false	IS	false	""
+bardagaatriðin	p a r t a G a a t r I D I n	n	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli)
+bakveröndinni	p a: k v E r 9 n t I n I	n	all	true	none	false	IS	false	""
+augnsambandi	9i x s a m p a n t I	adv	standard_cas	true	none	false	IS	false	""
+augnsambandi	9i k n_0 s a m p a n t I	n	standard_clear	true	none	false	IS	false	""
+augnbotna	9i k n p O h t n a	n	all	false	modifier	false	IS	false	""
+atlantshafsstofni	a h t l a n t s h a f s t O p n I	n	standard_clear	true	none	false	IS	false	Vantar entry (standard cas, sleppa seinna t ?)
+Atlantshafi	a h t l a n t s h a v I	ns	all	true	none	false	IS	false	""
+ásubergsskipið	a: u s Y p E r k s c I: p I D	adv	standard_clear	true	none	false	IS	false	Ofaukið
+ásubergsskipið	au: s Y p E r k s c I p_h I D	ns	north_clear	true	none	false	IS	false	""
+ásubergsskipið	au: s Y p E r k s c I p I D	ns	standard_clear	true	none	false	IS	false	""
+Árskógsströnd	au r_0 s k ou G s t r 9 n t	adv	standard_clear	true	none	false	IS	false	Ofaukið
+Árskógsströnd	au r_0 s k ou G s t r 9 n t	adv	standard_clear	true	none	false	IS	false	Ofaukið
+Árskógsströnd	au r_0 s k ou G s t r 9 n t	ns	all	true	none	false	IS	false	""
+ánna	au n a	n	all	false	head	false	IS	false	""
+Álftanes	au l_0 t a n E s	ns	all	true	none	false	IS	false	""
+ákvörðuð	au: k v 9 r D Y D	so	standard_clear	false	none	false	IS	false	Vantar entry (harðmæli)
+áhuginn	au: h Yi j I n	n	all	false	head	false	IS	false	""
+Ágústsdóttur	au: k u s t ou h t Y r	ns	all	true	none	false	IS	false	""
+Afturelding	a f t Y r E l t i N k	ns	all	true	none	false	IS	false	""
+aflausn	a v l 9i s t n_0	n	all	true	head	true	IS	false	""
+vönkuð	v 9i N_0 k Y D	lo	standard_clear	false	none	false	IS	false	""
+gírstönginni	c i r s t 9i N k I n I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u J_0 c I	so	standard_clear	false	none	false	IS	false	so
+Ágústsdóttur	au: k u s t ou h t Y r	n	standard_clear	true	none	false	IS	false	Ofaukið
+smokkfisksins	s m O h k f I s k s I n s	n	standard_clear	true	none	false	IS	false	""
+herstjóri	h E r_0 s t j ou r I	n	standard_clear	true	none	false	IS	false	Ofaukið
+Kársnesi	k au r_0 s n E: s I	n	standard_clear	true	none	false	IS	false	Ofaukið
+ofuráherslu	O: v Y r au: h E r_0 s t l Y	n	standard_clear	true	none	false	IS	false	Ofaukið
+endurskipulagning	E n t Y r s c I p Y l a k n i N k	n	standard_clear	false	none	true	IS	false	Ofaukið
+endurskipulagning	E n t Y r s c I p Y l a k n i N k	n	standard_clear	false	none	true	IS	false	Ofaukið
+framúrskarandi	f r a m u r s k a r a n t I	lo	standard_clear	true	none	false	IS	false	Ofaukið
+sjónvarpstæki	s j ou n v a r_0 p s t_h ai c I	n	standard_clear	true	none	false	IS	false	""
+sjónvarpsstöðina	s j ou n v a r_0 p s t 9 D I n a	n	standard_clear	true	none	false	IS	false	""
+búkarnir	p u: k a r t n I r	n	standard_clear	false	none	false	IS	false	Vantar entry (cas, sleppa r?)
+Karlsdóttur	k a r t l s t ou h t Y r	n	standard_clear	true	none	false	IS	false	Ofaukið
+klerksins	k_h l E r_0 k s I n s	n	standard_clear	false	none	false	IS	false	""
+heimsmeistarakeppnina	h ei m s m ei s t a r a c E h p n I n a	n	standard_clear	true	none	false	IS	false	Ofaukið
+plata	p_h l a: t a	n	standard_clear	false	head	false	IS	false	""
+eftirvæntingu	E f t I r v ai n t i N k Y	n	standard_clear	false	none	false	IS	false	Vantar entry (NE)
+hápunkti	h au: p_h u n_0 t I	n	standard_clear	true	none	false	IS	false	""
+tanks	t_h au N_0 k s	n	standard_clear	false	none	false	IS	false	""
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u J_0 c I	n	standard_clear	false	none	false	IS	false	n
+hlunki	l_0 u N_0 c I	n	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	so	standard_clear	false	none	false	IS	false	Ofaukið
+hlunki	l_0 u N_0 c I	so	standard_clear	false	none	false	IS	false	Ofaukið
+einkafyrirtæki	ei N_0 k a f I r I r t_h ai c I	n	standard_clear	true	none	true	IS	false	""
+flutningnum	f l Y h t n i N k n Y m	n	standard_clear	false	none	false	IS	false	Ofaukið
+fréttatengdir	f r j E h t a t ei N t I r	lo	standard_clear	false	none	false	IS	false	Ofaukið
+fimmtugasti	f I m_0 t Y G a s t I	lo	standard_clear	false	none	false	IS	false	Vantar entry (NE)
+hlutföllum	l_0 Y: t f 9 t l Y m	n	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli)
+fólksbíla	f ou l_0 k s p i l a	n	standard_clear	true	modifier	false	IS	false	""
+framhaldsskólakennarinn	f r a m h a l t s k ou: l a c E n a r I n	n	standard_clear	false	none	false	IS	false	Ofaukið
+einkavæðingar	ei N_0 k a v ai D i N k a r	n	standard_clear	true	modifier	true	IS	false	""
+gagnstæða	k a k s t ai D a	n	standard_clear	false	none	true	IS	false	Ofaukið
+gagnstæða	k a k s t ai D a	n	standard_clear	false	none	true	IS	false	Ofaukið
+gagnstæða	k a k n_0 s t ai D a	n	standard_clear	false	none	true	IS	false	""
+gagnstæða	k a k n_0 s t ai D a	lo	standard_clear	false	none	true	IS	false	""
+loftsal	l O f t s a l	n	standard_clear	true	none	false	IS	false	Ofaukið
+Hrafns	r_0 a p s	n	standard_clear	false	none	false	IS	false	Ofaukið
+efldist	E v l t I s t	so	standard_clear	false	none	false	IS	false	""
+skenkja	s c ei J_0 c a	so	standard_clear	false	none	false	IS	false	Vantar entry (NE)
+hornsteinn	h O r t n s t ei t n	n	standard_clear	true	none	false	IS	false	Vantar entry (cas) h O t n ?
+kjarakaup	c_h a: r a k_h 9i p	n	standard_clear	true	none	false	IS	false	""
+heima	h ei: m a	n	standard_clear	false	both	false	IS	false	Ofaukið
+fljótið	f l j ou: t I D	so	standard_clear	false	none	false	IS	false	""
+hrísgrjónaökrum	r_0 i s k r j ou n a 9 k r Y m	n	standard_clear	false	none	false	IS	false	Vantar entry (harðmæli)
+heildartekjur	h ei l t a r t_h E c Y r	n	standard_clear	true	none	false	IS	false	Vantar entry (harðmæli) (t_h E c_h Y r)
+hornauga	h O r t n 9i G a	n	standard_clear	true	none	false	IS	false	Vantar entry (cas) h O t n ?
+hófum	h ou: v Y m	n	standard_clear	false	none	false	IS	false	Ofaukið
+hófum	h ou: v Y m	so	standard_clear	false	none	false	IS	false	Ofaukið
